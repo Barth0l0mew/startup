@@ -2,63 +2,7 @@ import React,{useContext}  from "react";
 import './pagination.css'
 import {ReactComponent as Arrow} from "../../img/right-default.svg";
 import Context from "../context/context";
-// function Pagination ({prePage,total,getPage,currentPage}){
-//   let  pageNumber = []
-//   let page = Math.ceil(total/prePage)
 
-//   let pageState=0;
-//   let pageSort=[];
-//   let collPage=3;
- 
-//   const lastRepo = currentPage*prePage;
-//   const firstRepo = lastRepo - prePage+1;
-//   for (let i=1;i<=page; i++){
-//     pageNumber.push(i);
-//   }
-//   if (page <5){
-//     pageSort=pageNumber
-//   }else {
-//     if (currentPage<collPage){
-//       pageSort=pageNumber.slice(pageState,pageState+collPage).concat('...',page)
-//     }
-//     if (currentPage===collPage){
-//       pageSort=pageSort.concat(1,pageNumber.slice(currentPage-2,currentPage+1)).concat('...',page)
-//     }
-//     if (currentPage<=(page-collPage)&&currentPage>collPage){
-//       pageSort=pageSort.concat(1,'...',pageNumber.slice(currentPage-2,currentPage+1)).concat('...',page)
-//     }
-//     if (currentPage===(page-collPage+1)){
-//       pageSort=pageSort.concat(1,'...',pageNumber.slice(currentPage-2,currentPage+1)).concat(page)
-//     }
-//     if (currentPage>page-collPage+1){
-//     pageSort=pageSort.concat(1,'...',pageNumber.slice(page-collPage,page))
-//     }
-
-//   }
-  
-//   return (
-//     <div className="pagination">
-//       {firstRepo}-{lastRepo} of {total} items
-//       <Arrow className="pagination__left" 
-//       onClick={
-//         !(currentPage===1)?()=>getPage(currentPage-1):null}></Arrow>
-//       {pageSort.map((el,item)=>{
-//         return <a 
-//         className={el===currentPage?'pagination__item active':'pagination__item'} 
-//         href='#' 
-//         key={item} 
-//         onClick={()=> {
-//           if (el=='...'&&item<currentPage){return getPage(currentPage-2)}
-//           if (el=='...'&&item>currentPage){return getPage(currentPage+2)}
-//          return getPage(el)}}>{el}</a>
-//       })}
-//        <Arrow className="pagination__right"
-//        onClick={
-//         !(currentPage===page)?()=>getPage(currentPage+1):null}></Arrow>
-      
-//     </div>
-//   )
-// }
 function Pagination(){
   const {data,setData}= useContext(Context)
   const page= Math.ceil(data.dataUser.public_repos/data.setPage)

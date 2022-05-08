@@ -7,7 +7,6 @@ function Empty ({name,title}){
         <svg className={`icon icon-${name}`}>
           <use xlinkHref={`${Icon}#${name}`}></use>
         </svg>
-    
       <div className="title">{title}</div>
     </div>
   )

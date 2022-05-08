@@ -5,7 +5,6 @@ import Followers from '../../img/followers.svg';
 import Following from '../../img/following.svg';
 function UserInfo (){
   const{data,setData} = useContext (Context)
-  console.log ('info',data)
   return(
     <div className="user-info"> 
       <img className="user-info__foto" src={data.dataUser.avatar_url}>

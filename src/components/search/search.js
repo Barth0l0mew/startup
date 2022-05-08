@@ -10,31 +10,21 @@ function Search (){
  function onSubmit(event){
    event.preventDefault();
    if (value.trim()){
-      setData({...data, search:value})
+      setData({...data,currentPage:1, search:value})
       setIsTyping(false)
     }
-   console.log (value)
    setValue('')
  }
  function fetching (userName){
   let info;
-  fetch(`https://api.github.com/users/${userName}`, {
-    headers: {
-        'Authorization': 'token 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',
-    }
-})
+  fetch(`https://api.github.com/users/${userName}`)
   .then(response=> 
      response.ok?response.json():Promise.reject(response)
   )
   .then(inf=>{ 
     info=inf
-  //  setData({...data,dataUser:inf, isLoading:false})
-    console.log (info)
-    return fetch (`${inf.repos_url}?per_page=${data.setPage}&page=${data.currentPage}`, {
-      headers: {
-          'Authorization': 'token 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',
-      }
-    })
+
+    return fetch (`${inf.repos_url}?per_page=${data.setPage}&page=${data.currentPage}`)
   })
   .then(response=>response.json())
   .then(infRepo=>{
@@ -42,9 +32,9 @@ function Search (){
       setData({...data,repo:infRepo,dataUser:info,isLoading:false, isError:true})
    
   })
-  .catch(error=>
-   { setData({...data,dataUser:{},repo:[],currentPage:1, isError:false})
-     console.log('UserName not found ', data.isError)}
+  .catch(error=>{
+      setData({...data,dataUser:{},repo:[],currentPage:1, isError:false})
+  }
   )
 
 
@@ -57,7 +47,6 @@ function Search (){
   
  },[isTyping,data.search,data.currentPage])
   
-
   return(
     <form className="search" onSubmit={onSubmit}> 
       <button className="search__btn" type="onSubmit">
