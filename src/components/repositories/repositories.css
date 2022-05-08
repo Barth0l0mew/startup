@@ -23,7 +23,7 @@
   word-break: break-all;
 }
 @media screen and (max-width:768px){
-  .repo__discription{
+  .repo{
     padding: 24px 0px 24px 32px;
    }
 }
