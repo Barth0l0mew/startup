@@ -7,7 +7,7 @@ import Empty from "../empty/empty";
 
 function UserRepo ({value}){
 
-  const {data,setData} = useContext(Context)
+  const {data} = useContext(Context)
  
   return(
      <div className="user-Repo"> 

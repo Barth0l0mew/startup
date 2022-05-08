@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState} from 'react';
 import Context from './components/context/context';
 import './App.css';
 import Empty from './components/empty/empty';
