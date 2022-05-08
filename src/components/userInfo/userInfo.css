@@ -1,0 +1,57 @@
+.user-info{
+  width:292px;
+  margin-right: 85px;
+  margin-bottom: 190px;
+}
+.user-info__foto{
+  width: 280px;
+  height: 280px;
+  border-radius:50%;
+  margin-bottom: 28px;
+}
+.user-info__userName{
+  font-style: normal;
+font-weight: 600;
+font-size: 26px;
+line-height: 130%;
+color: #000000;
+margin-bottom: 12px;
+}
+.user-info__login{
+display: block;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+text-decoration: none;
+color: #0064EB;
+margin-bottom:25px ;
+}
+.user-info__footer{
+  display: flex;
+  justify-content: space-between;
+  font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: #000000;
+}
+.user-info__followers{
+display: flex;
+align-items:center
+}
+.user-info__followers-icon{
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+.user-info__following{
+  display: flex;
+  align-items:center
+  }
+  @media screen and (max-width:768px){
+    .user-info{
+      margin-right: 0;
+     }
+  }

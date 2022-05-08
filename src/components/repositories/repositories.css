@@ -1,0 +1,24 @@
+.repo{
+  padding: 24px 32px;
+ 
+
+}
+.repo:not(:last-child){
+  margin-bottom: 24px;
+}
+.repo__title{
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #0064EB;
+  text-decoration: none;
+  margin-bottom: 16px;
+  display: block;
+}
+.repo__discription{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  
+}

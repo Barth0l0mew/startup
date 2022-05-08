@@ -1,0 +1,18 @@
+.user-Repo{
+  width: 877px;
+  position: relative;
+ }
+.user-Repo__info{
+  margin-bottom: 29px;
+  font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 130%;
+color: #000000;
+}
+
+@media screen and (max-width:768px){
+  .user-Repo{
+    width: 280px;
+   }
+}
